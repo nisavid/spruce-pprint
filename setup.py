@@ -13,26 +13,27 @@ from setuptools import find_packages as _find_packages, setup as _setup
 
 NAME_NOPREFIX = 'pprint'
 
-NAME = 'nisavid-' + NAME_NOPREFIX
+NAME = 'Spruce-' + NAME_NOPREFIX
 
-VERSION = '0'
+VERSION = '0.1.0'
 
 SITE_URI = ''
 
-DESCRIPTION = 'Output formatting tools.'
+DESCRIPTION = 'String formatting'
 
-LONG_DESCRIPTION = DESCRIPTION + '''
+README_FILE = 'README.rst'
+with open(README_FILE, 'r') as _file:
+    README = _file.read()
 
-This is an extension of Python's pprint module.
+CHANGES_FILE = 'CHANGES.rst'
+with open(CHANGES_FILE, 'r') as _file:
+    CHANGES = _file.read()
 
-These tools beautify text strings, especially string representations of
-Python objects.  They are not responsible for constructing the original
-strings or string representations--that is the prerogative of methods
-such as __repr__() and __str__() and of application-specific formatting
-functions.
-'''
+LICENSE_FILE = 'LICENSE'
+with open(LICENSE_FILE, 'r') as _file:
+    LICENSE = _file.read()
 
-LICENSE = 'LGPLv3'
+LONG_DESCRIPTION = '\n\n'.join((README, CHANGES))
 
 TROVE_CLASSIFIERS = \
     ('Development Status :: 5 - Production/Stable',
@@ -60,7 +61,7 @@ DEPS_SEARCH_URIS = ()
 
 # packages --------------------------------------------------------------------
 
-PARENT_NAMESPACE_PKG = 'nisavid'
+PARENT_NAMESPACE_PKG = 'spruce'
 
 ROOT_PKG = '.'.join((PARENT_NAMESPACE_PKG, NAME_NOPREFIX))
 
