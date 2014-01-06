@@ -14,7 +14,7 @@ The standard :mod:`pprint` functions are:
 
 """
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 from . import _pprinters
